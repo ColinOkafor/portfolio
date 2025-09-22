@@ -1,0 +1,38 @@
+.App {
+  max-width: 3400px;
+  /* make content wider */
+  margin: 0 auto;
+  /* keep centered horizontally */
+  padding: 2rem 3rem;
+  /* extra horizontal padding */
+  display: flex;
+  /* enable flexbox */
+  flex-direction: column;
+  /* stack sections vertically */
+  gap: 4rem;
+  /* space between sections */
+  text-align: center;
+  /* center text (optional) */
+}
+
+section {
+  display: flex;
+  /* flexbox for content inside */
+  flex-direction: column;
+  /* stack items by default */
+  align-items: center;
+  /* center horizontally */
+  gap: 1.5rem;
+  /* space between section items */
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  /* keeps the aspect ratio */
+}
+
+Button {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
