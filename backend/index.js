@@ -1,16 +1,14 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
 const app = express();
 
-const PORT = 3003;
-app.use(cors({ origin: 'http://localhost:2005' }));
-app.use(express.json());//parse JSON body
-app.use(express.urlencoded({ extended: true }));//parse form data
+app.use(cors());
+app.use(express.json());
+app.use("/frontend", require("./connect"));
 
-const userRoutes = require('./connect.js');
-app.use('/', userRoutes);
-
-
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.get("/", (req, res) => {
+    res.send("Backend is running!");
 });
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
