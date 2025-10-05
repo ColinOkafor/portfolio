@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import { homeIcon, aboutIcon, projectsIcon, contactIcon, emailIcon, phoneIcon, locationIcon, my_pfp, a2, a6, a7, github_icon, linkedin_icon, discord_icon, facebook_icon } from './portfolio-images';
+import { homeIcon, aboutIcon, projectsIcon, contactIcon, emailIcon, phoneIcon, locationIcon, my_pfp, a6, a7, github_icon, linkedin_icon, discord_icon, facebook_icon } from './portfolio-images';
 function App() {
 
   async function userInfo(formData) {
@@ -232,7 +232,8 @@ function App() {
 
               <VideoPlayer src={a6} />
 
-              <VideoPlayer src={a2} />
+              {/* ✅ use public path for the large file */}
+              <VideoPlayer src="/a2_video.mp4" />
 
               <VideoPlayer src={a7} />
 
